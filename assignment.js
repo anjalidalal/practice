@@ -852,24 +852,40 @@ for (let n = 0; n < matrix1.length; n++) {
 // console.log(triangleSum);
 
 // //DIAGONAL DIFFERENCE
+// let matrix = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [0, 8, 9]
+// ];
+// let difference;
+// let sum1 = 0;
+// let sum2= 0;
+
+// for (let i = 0; i < matrix.length; i++) {
+//    for (let j = 0; j < matrix[i].length; j++) {
+//        if (i === j) {
+//            sum1 += matrix[i][j];
+//        }
+//        if (i + j == 2) {
+//            sum2 += matrix[i][j];
+//        }
+//     }   
+// }
+// difference = sum2 - sum1;
+// console.log({difference})
+
+//TRANSPOSE MATRIX
 let matrix = [
     [1, 2, 3],
     [4, 5, 6],
-    [0, 8, 9]
+    [7, 8, 9]
 ];
-let difference;
-let sum1 = 0;
-let sum2= 0;
-
-for (let i = 0; i < matrix.length; i++) {
-   for (let j = 0; j < matrix[i].length; j++) {
-       if (i === j) {
-           sum1 += matrix[i][j];
-       }
-       if (i + j == 2) {
-           sum2 += matrix[i][j];
-       }
-    }   
+let trnspMatrix = [];
+for (let col = 0; col < matrix[0].length; col++){
+    let newRow = [];
+    for (let row = 0; row < matrix.length; row++) {
+        newRow.push(matrix[row][col])
+    }
+    trnspMatrix.push(newRow);
 }
-difference = sum2 - sum1;
-console.log({difference})
+console.log(trnspMatrix);   
