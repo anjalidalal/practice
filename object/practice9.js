@@ -1,21 +1,36 @@
-let names = ["Rice", "Dal", "Salt"];
-let quantitys = [3, 2, 1];
-let prices = [60, 50, 20];
+// product cart object
 
-let users = {
+let name = ["Rice", "Dal", "Salt"];
+let quantity = [2, 3, 1];
+let price = [60, 50, 20];
+
+// let users = {
+//     total : function(){
+//         let product = this.quantity * this.price;
+//         return product;
+//     }
+// };
+
+let user = {
+    data :[],
     total : function(){
-        let product = this.quantity * this.price;
-        return product;
+        let sum = 0;
+        for (let i = 0; i < this.data.length; i++) {
+            sum += this.data[quantity] * this.data[price];
+        }
+        return sum;
     }
-};
-
-for (let i = 0; i < names.length; i++) {
-    let user = {};
-    user.name = names[i];
-    user.quantity = quantitys[i];
-    user.price = prices[i];
-    users.push(user)
-    
 }
-//console.log(users)
+
+for (let i = 0; i < name.length; i++) {
+   
+    let u = {}
+    u.name = name[i];
+    u.quantity = quantity[i];
+    u.price = price[i]
+
+    user.data.push(u)
+}
+
+console.log(user, user.total())
 //users.user
