@@ -5,18 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .main {
+            background-color: white;
+            width: 600px;
+            margin: auto;
+            border: 1px solid rgb(204, 196, 196);
+            border-radius: 5px;
+            margin-top: 100px;
+        }
+        .main > div{
+            font-weight: 600;
+            padding: 20px;
+            border-bottom: 1px solid rgb(231, 224, 224);    
+        }
+        div{
+            display: block;
+        }
+        body{
+            font-family: 'lato', sans-serif;
+        }
+        .one{
+            color: rgb(48, 48, 161);
+            background-color: #99bce4;
+        }
+        .two{
+            background-color: rgb(206, 202, 202);
+            columns: rgb(100, 94, 94);
+        }
+        .three{
+            background-color: rgba(111, 219, 156, 0.815);
+            color: rgb(29, 133, 20);
+        }
+        .four{
+            background-color: rgba(243, 133, 125, 0.815);
+            color: rgb(90, 20, 20);
+        }
+        .five{
+            background-color: rgba(238, 240, 118, 0.699);
+            counter-reset: rgb(182, 143, 17);
+        }
+        .six{
+            background-color: rgba(72, 219, 219, 0.678);
+            color: rgb(17, 137, 153);
+        }
+        .seven{
+            background-color: rgba(245, 250, 247, 0.815);
+            color: rgb(131, 136, 130);
+        }
+        .eight{
+            background-color: rgba(171, 177, 173, 0.815);
+            color: rgb(77, 82, 76);
+        }
+    </style>
 </head>
 <body>
-    <div style="background-color: teal; width: 100px; height: 100px; margin: 20px; float: left;"></div>
-    <div style="background-color: teal; width: 100px; height: 100px; margin: 20px; float: left;"></div>
-    <div style="background-color: teal; width: 100px; height: 100px; margin: 20px; float: left;"></div>
-    <div style="background-color: teal; width: 100px; height: 100px; margin: 20px; float: left;"></div>
-    <div style="background-color: teal; width: 100px; height: 100px; margin: 20px; float: left;"></div>
-    <div style="background-color: teal; width: 100px; height: 100px; margin: 20px; float: left;"></div>
-    <div style="background-color: teal; width: 100px; height: 100px; margin: 20px; float: left;"></div>
-    <div style="background-color: teal; width: 100px; height: 100px; margin: 20px; float: left;"></div>
-    <div style="background-color: teal; width: 100px; height: 100px; margin: 20px; float: left;"></div>
-    <div style="background-color: teal; width: 100px; height: 100px; margin: 20px; float: left;"></div>
+ <div class="main">
+         <div class="one">This is a primary list group item</div>
+         <div class="two">This is a secondary list group item</div>
+         <div class="three">This is a success list group item</div>
+         <div class="four">This is a danger list group item</div>
+         <div class="five">This is a warrning list group item</div>
+         <div class="six">This is a info list group item</div>
+         <div class="seven">This is a light list group item</div>
+         <div class="eight">This is a dark list group item</div>
+ </div>
 
 
 </body>
