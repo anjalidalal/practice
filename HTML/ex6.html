@@ -4,41 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS properties</title>
+    <style>
+        body{
+            font-family: 'lato', sans-serif;
+            background-color: black;
+        }
+        #main{
+            background-color: white;
+            width: 1000px;
+            padding: 50px;
+            margin: 30px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap : 24px
+        }
+        p{
+            font-size: 20px;
+        }
+        #upper{
+           
+            background-color: white;
+            width: 500px;
+            text-align: center;
+        }
+        #lower{
+            display: flex;
+            line-height: 2em;
+            letter-spacing: 0.em;
+        }
+        #left{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        #one{
+           margin-bottom: 82px;
+        }
+    </style>
 </head>
 <body>
-    <table>
-        <tr>
-            <th colspan="11", style="height: 50px;"></th>
-        </tr>
-        <tr>
-            <td style="height: 100px; width: 150px;"></td>
-            <td style="background-color: teal; width: 300px; height: 50px;"></td>
-            <td style="height: 100px; width: 50px;"></td>
-            <td style="background-color: teal; width: 300px; height: 50px;"></td>
-            <td style="height: 100px; width: 50px;"></td>
-            <td style="background-color: teal; width: 300px; height: 50px;"></td>
-            <td style="height: 100px; width: 50px;"></td>
-            <td style="background-color: teal; width: 300px; height: 50px;"></td>
-            <td style="height: 100px; width: 50px;"></td>
-            <td style="background-color: teal; width: 300px; height: 50px;"></td>
-            <td style="height: 100px; width: 150px;"></td>
-            </tr>
-        <tr>
-            <td colspan="11", style="height: 20px;"></td>
-        </tr>
-        <tr>
-            <td style="height: 100px; width: 150px;"></td>
-            <td style="background-color: teal; width: 300px; height: 50px;"></td>
-            <td style="height: 100px; width: 50px;"></td>
-            <td style="background-color: teal; width: 300px; height: 50px;"></td>
-            <td style="height: 100px; width: 50px;"></td>
-            <td style="background-color: teal; width: 300px; height: 50px;"></td>
-            <td style="height: 100px; width: 50px;"></td>
-            <td style="background-color: teal; width: 300px; height: 50px;"></td>
-            <td style="height: 100px; width: 50px;"></td>
-            <td style="background-color: teal; width: 300px; height: 50px;"></td> 
-        </tr>    
-    </table>
+    <div id="main">
+        <div id="upper">
+            <h1>Working and thriving</h1>
+            <div><p>We want people to thrive at Slack; We
+               believe you do your best work when you 
+               feel your best. Here are a just few  
+               benefits we're proud to provide our 
+               team with.</p></div>
+        </div>
+        <div id="lower">
+            <div id="left">
+            <div>
+            <h2>Learning & development</h2>
+            <p>Recieve an annual allowance for 
+                professional development, plus a monthly 
+                bouns you can use towards anything. That
+                means anything: a gym membership, your
+                pet sitter, a new work look. Whatever
+                matters most to you.
+            </p>
+            </div>
+            <hr>
+            <div>
+                <h2>Parental leave</h2>
+            <p>A lot of us have family, of all sorts
+            of shapes and sizes, welcome each new addition 
+            with generous parental leave and "bonding
+            leave".
+            </p>
+            </div>
+        </div>
+        <div id="right">
+            <div id="one">
+                <h2>Health & wellness</h2>
+                <p>Free medical, dental care and eye 
+                   care and eye care for you and your 
+                   family - Slack pays 100% of your premiums
+                </p>
+            </div><hr>
+            <div id="two">
+            <h2>Happier weekdays</h2>
+            <p>A culture light on meetings(or that's
+            our aim, at least) with guest speakers and 
+            opportunities to like weekly catered lunches
+            and breakfasts, Thursady Socials and game 
+            nights. But we don't stay in the office 24/7.
+            </p>
+            </div>
+        </div>
+    </div> 
+    </div>
 </body>
 </html>
