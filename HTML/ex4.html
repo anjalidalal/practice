@@ -4,49 +4,144 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Compare Pricing</title>
+    <style>
+        body{
+            background-color: black;
+            width: 900px;
+            padding: 100px;
+            font-family: 'lato', sans-serif;
+            line-height: 20px;
+        }
+        .main{
+            background-color: white;
+            height: 500px;
+            
+        }
+        
+        h1{
+            text-align: center;
+            color: rgb(37, 37, 88);
+            font-size: 30px;
+            font-weight: 550;
+            padding-top: 20px;
+        }
+        .line {
+            background-color: rgb(37, 37, 88);
+            width: 100px;
+            height: 2px;
+            margin: auto;
+            border-radius: 2px;
+        }
+        p{
+            text-align: center;
+            font-size: 13px;
+            color :  rgba(33, 33, 107, 0.815);
+        }
+        .table-1 {
+           
+            
+        }
+        .table-1 > div, .table-2 > div {
+           background-color: white;
+           width: 250px;
+           float: left;
+           margin: auto;
+           margin-bottom: 10px;
+           padding: 20px;}
+        div{
+          margin-left: 30px;
+          margin-right: 20px;
+        }
+        td{
+            background-color: cadetblue;
+            
+        }
+        th{
+           color: #181835d0;
+           font-size: 13px;
+           font-weight: 500;
+           margin-block-start: 1em;
+           margin-block-end: 1em;
+           margin-inline-start: 0px;
+           margin-inline-end: 0px;
+        }
+    </style>
 </head>
 <body>
-    <table border="1">
-        <tr>
-            <td>Row 1 Column 1</td>
-            <td>Row 1 Column 2</td>
-            <td>Row 1 Column 3</td>
-        </tr>
-        <tr>
-            <td>Row 2 Column 1</td>
-            <td>Row 2 Column 2</td>
-            <td>Row 2 Column 3</td>
-        </tr>
-        <tr>
-            <td>Row 3 Column 1</td>
-            <td>Row 3 Column 2</td>
-            <td>Row 3 Column 3</td>
-        </tr>
-        <tr>
-            <td>Row 4 Column 1</td>
-            <td>Row 4 Column 2</td>
-            <td>Row 4 Column 3</td>
-        </tr>
-        <tr>
-            <td colspan="3">Row 5</td>
-        </tr>
-        <tr>
-            <td rowspan="2">Row 6</td>
-            <td>Row 6 Column 2</td>
-            <td>Row 6 Column 3</td>
-        </tr>
-        <tr>
-            <td>Row 7 Column 2</td>
-            <td>Row 7 Column 3</td>
-        </tr>
-        <tr>
-            <td>Row 8 Column 1</td>
-            <td rowspan="2", colspan="2">Row 8 Column 2</td>
-        </tr>
-        <tr>
-            <td>Row 9 Column 1</td>
-        </tr>
-    </table>
+    <div class="container">
+    <div class="main">
+        <div class="one">
+            <h1>Compare Pricing</h1>
+            <div class="line"></div>
+            <p>Instamojo's overall costs compared to 
+            other modren platforms & traditional gateways</p>
+            <table class="table-1">
+                <div>
+                    <tr>
+                        <th>FEES & OTHER CHARGES</th>
+                        <TH>INSTAMOJO</TH>
+                        <th>MODREN PLATFORMS</th>
+                        <th>TRADITIONAL GATEWAYS</th>
+                    </tr>
+                </div>
+                <div>
+                    <tr>
+                        <td>Setup Fee</td>
+                        <td>Free</td>
+                        <td>$0 to $10,000/year</td>
+                        <td>$25,000/year</td>
+                     </tr>
+                </div>
+                <div><tr>
+                    <td class="element">Annual Maintenance</td>
+                    <td>Free</td>
+                    <td>$10,000 to $25,000/year</td>
+                    <td>$10,000 to $25,000/year</td>
+                </tr></div>
+                <div><tr>
+                    <td>Minimum Commitment</td>
+                    <td>no Commitment</td>
+                    <td>$0 to $10,000/year</td>
+                    <td>Upto $1,00,000/month</td>
+                </tr></div>
+                
+            </table>
+        </div>
+        <div class="two">
+            <h1>No Hidden Costs </h1>
+            <div class="line"></div>
+            <p>Cost of time and effort spent
+            increases hidden costs. But not on 
+            Instamojo.</p>
+            <table class="table-2">
+                <div><tr>
+                    <th>COSTS</th>
+                    <TH>INSTAMOJO</TH>
+                    <th>MODREN PLATFORMS</th>
+                    <th>TRADITIONAL GATEWAYS</th>
+                </tr></div>
+                <div><tr>
+                    <td>Time to Get Started</td>
+                    <td>3-5 minutes</td>
+                    <td>1-4 weeks</td>
+                    <td>4-8 weeks</td>
+                 </tr></div>
+                <div><tr>
+                    <td>Developer Costs for Integration</td>
+                    <td>Not Needed</td>
+                    <td>$1 Lakh+</td>
+                    <td>$1 Lakh+</td>
+                </tr></div>
+                <div><tr>
+                    <td>Legal Costs of Agreements</td>
+                    <td>Not Needed</td>
+                    <td>Varies</td>
+                    <td>$1 Lakh+</td>
+                </tr></div>
+            </table>
+        </div>
+    </div>
+</div>
 </body>
 </html>
