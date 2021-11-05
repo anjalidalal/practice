@@ -4,25 +4,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Masai Campus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: black;
+            font-family: 'lato', sans-serif;
+            align-items: center;
+        }
+        .main{
+            background-color: white;
+            width: 1000px;
+            height: 500px;
+            margin: auto;
+            margin-top: 83px;
+            border-radius: 3px;
+        }
+        .upper{
+            text-align: center;
+            padding: 20px;
+        }
+        h1{
+           font-weight: 300;
+           color: rgb(5, 0, 0);
+           margin: 20px;
+        }
+        .para{
+           padding-left: 40px;
+           padding-right: 40px;
+           font-size: 15px;
+           line-height: 1.56em;
+           word-spacing: 0.2em;
+        }
+        #p-2{
+            width: 860px;
+            padding-left: 20px;
+        }
+        .lower{
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+           
+        }
+        .image{
+            border: 0.1px solid gainsboro;
+            border-radius: 2px;
+            padding: 10px;
+        }
+        p{
+            text-align: center;
+            padding: 10px;
+        }
+
+    </style>
 </head>
 <body>
-    <form action="">
-        <label for="">Firstname</label>
-        <input type="text"><br><br>
-        <label for="">Lastname</label>
-        <input type="text"><br><br>
-        <label for="">Address Line 1</label>
-        <input type="text"><br><br>
-        <label for="">Address Line 2</label>
-        <input type="text"><br><br>
-        <label for="">City</label>
-        <input type="text"><br><br>
-        <label for="">Pincode</label>
-        <input type="number"><br><br>
-        <label for="">Mobile No.</label>
-        <input type="number">
-    </form>
-    <hr>
+   <div class="main">
+       <div class="upper">
+           <h1>Masai School Campus</h1>
+           <div class="para">
+           <div id="p-1">Our main capmus is centerally located in 
+               Koramangala, Heart of Banglore which is 
+               well connected to every part of the city.
+           </div>
+           <div id="p-2">Our Patana campus is located at Kankarbagh
+                Main Road. The reason for choosing co-working
+                space over any other classroom is very simple
+                -there is no better place to learn coding than
+                being in the environment of 50+ tech teams
+                of various companies.</div></div>
+       </div>
+       <div class="lower">
+           <div>
+            <div class="image">
+                <img src="./image/furniture-1.jpg" width=250px" height="200px" alt="">
+            </div>
+            <p>91springboard, Banglore</p>
+           </div>
+           <div>
+            <div class="image">
+                <img src="./image/furniture-2.jpg" width=250px" height="200px" alt="">
+            </div>
+            <p>BHIVE, Banglore</p>
+           </div>
+           <div>
+            <div class="image">
+            <img src="./image/furniture-3.jpg" width=250px" height="200px" alt="">
+          </div>
+          <p>Work Studio, Patna</p>
+    </div>
+            
+        </div>
+    </div>
+</div>
 </body>
 </html>
