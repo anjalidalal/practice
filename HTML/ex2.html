@@ -5,117 +5,109 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML INTRO</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .main{
+            background-color: white;
+            width: 1000px;
+            height: 99vh;
+            margin: auto;
+            margin-top: 2%;
+        }
+        .upper{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+            margin-bottom: 2.5%;
+        }
+        .lower{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+        }
+        .heading{
+            font-size: 22px;
+            text-align: center;
+        }
+        .image{
+            background-color: rgb(247, 156, 140);
+            width: 250px;
+            height: 280px;
+        }
+        p{
+            margin-top: 2%;
+            margin-bottom: 2%;
+            font-size: 18px;
+            color: rgb(36, 33, 33);
+        }
+        .logo{
+            background-color: coral;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            color: wheat;
+        }
+        .card{
+            display: flex;
+        }
+    </style>
 </head>
 <body>
-    <h1>HOBBIES</h1>
-    <ol>
-        <li>READING</li>
-        <ul>
-            <li>Novel</li>
-            <li>Commics</li>
-            <li>Books</li>
-        </ul>
-        <li>LISTENING MUSIC</li>
-        <ul>
-            <li>English Songs</li>
-            <li>Hindi Songs</li>
-            <li>Punjabi Songs</li>
-        </ul>
-        <li>ART & CRAFT</li>
-        <ul>
-            <li>Drawing</li>
-            <li>Diy</li>
-            <li>Painting</li>
-        </ul>
-    </ol>
-    <hr>
-    <table border="1">
-        <tr>
-            <th>School</th>
-            <th>College</th>
-            <th>University</th>
-            <th>Degree</th>
-            <th>Percentage</th>
-        </tr>
-        <tr>
-            <td>Kendriya Vidyalaya</td>
-            <td>Pt Nekiram Sharma</td>
-            <td>M.D.U</td>
-            <td>B.C.A</td>
-            <td>82%</td>
-        </tr>
-    </table>
-    <hr>
-    <table border="1">
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td></td>
-            <td colspan="4", rowspan="3"></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        <tr>
-            <td>5</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td></td>
-            <td colspan="2"></td>
-            <td></td>
-            <td rowspan="2"></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>8</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td colspan="2"></td>
-        </tr>
-    </table>
-    <hr>
-    <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r2.png
-    " alt="">
-    <hr>
+    <div class="main">
+        <div class="heading">Weeknight Dinners</div>
+        <div class="upper">
+            <div class="image">
+                <img src="./image/image-1.jpg" width="250px" height="220px" alt="">
+                <div class="card">
+                    <p>Sheet Pan Honey Mustard Pork Chops w...</p>
+                    <div class="logo">yum</div>
+                </div>
+                
+            </div>
+            <div class="image">
+                <img src="./image/image-2.jpg" width="250px" height="220px" alt="">
+                <div class="card">
+                    <p>Apricot Mustard Glazed</p>
+                    <div class="logo">yum</div>
+                </div>
+            </div>
+            <div class="image">
+                <img src="./image/image-3.jpg" width="250px" height="220px" alt="">
+                <div class="card">
+                    <p>Pork Milanese with Cacio e Pepe Spag...</p>
+                    <div class="logo">yum</div>
+                </div>
+            </div>
+        </div>
+        <div class="heading">Popular Now</div>
+        <div class="lower">
+            <div class="image">
+                <img src="./image/image-4.jpg" width="250px" height="220px" alt="">
+                <div class="card">
+                    <p>Brown Sugar Cookies</p>
+                    <div class="logo">yum</div>
+                </div>
+            </div>
+            <div class="image">
+                <img src="./image/image-5.jpg" width="250px" height="220px" alt="">
+                <div class="card">
+                    <p>Vegan Spinach Lasanga</p>
+                    <div class="logo">yum</div>
+                </div>
+            </div>
+            <div class="image">
+                <img src="./image/image-6.jpg" width="250px" height="220px" alt="">
+                <div class="card">
+                    <p>Easy Korean Sticky Chicken</p>
+                    <div class="logo">yum</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
