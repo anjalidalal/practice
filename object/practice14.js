@@ -1,13 +1,14 @@
-let sum = function(num){
-     let s = 0;
-     for (let i = 0; i <= num; i++) {
-          s += i; 
-     }
-     return s;
+let check = function(num){
+   if (num % 2 == 0) {
+        console.log("Even");
+   }  
+   else{
+       console.log("Odd");
+   }   
 } 
 const runProgram = (input) => {
      const num = (input.trim().split(" ").map(Number));
-     console.log(sum(num));
+     check(num);
 }
 
 if (process.env.USERNAME === "mansi") {
