@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hindu Layout</title>
+    <style>
+      body {
+        background-color: black;
+        box-sizing: border-box;
+      }
+      .main {
+        background-color: whitesmoke;
+        margin: auto;
+        width: 380px;
+        padding: 10px;
+      }
+      #heading {
+        font-size: 24px;
+        font-weight: lighter;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 1%;
+        margin-bottom: 0%;
+      }
+      .name {
+        font-size: 17px;
+        line-height: 10px;
+        font-weight: 600;
+        padding: 2px;
+      }
+      .line {
+        color: #90a7c2;
+      }
+      .content-1 {
+        padding: 3px 20px;
+      }
+      .upper {
+        background-color: #062f5e;
+        width: 380px;
+        height: 340px;
+        padding: 0;
+        margin: 0;
+        color: whitesmoke;
+      }
+      .article {
+        display: flex;
+        padding-top: 20px;
+      }
+      .content-6,
+      .content-5,
+      .content-4,
+      .content-3,
+      .content-2 {
+        font-size: 14px;
+        font-family: sans;
+        background-color: white;
+        width: 265px;
+        height: 100px;
+        padding-left: 10px;
+      }
+      .one {
+        font-size: 17px;
+        margin-top: 1%;
+      }
+      @media (min-width: 768px) {
+        .main {
+          width: 660px;
+        }
+        .upper {
+          width: 660px;
+          height: 400px;
+        }
+        .upper > img {
+          width: 660px;
+          height: 200px;
+        }
+        .left {
+          display: none;
+        }
+        .right {
+          display: flex;
+        }
+        .content-6,
+        .content-5,
+        .content-4,
+        .content-3 {
+          font-size: 14px;
+          font-family: sans;
+          background-color:white;
+          width: 200px;
+          height: 100px;
+          padding-left: 20px;
+          padding-top: 10px;
+        }
+        .second {
+          padding-left: 20px;
+        }
+        .name {
+          font-size: 20px;
+          line-height: 10px;
+          font-weight: 600;
+          padding: 0px 10px;
+        }
+        .line {
+          color: #90a7c2;
+          padding-left: 10px;
+          font-size: 17px;
+        }
+        #heading {
+          font-size: 29px;
+          font-weight: 600;
+          padding-left: 30px;
+          padding-right: 30px;
+          margin-top: 1%;
+          margin-bottom: 0%;
+        }
+        .one{
+            font-weight: 600;
+        }
+      }
+      @media (min-width : 980px) {
+          .main{
+              display: flex;
+              width: 940px;
+              height: 90vh;
+          }
+          .upper{
+            width: 500px;
+            height: 437px;
+          }
+          .upper > img{
+            width: 500px;
+          }
+          .right{
+            flex-direction: column;
+          }
+          .left{
+            display: unset;
+          }
+        .content-6,
+        .content-5 {
+          font-size: 17px;
+          font-family: sans;
+          background-color: white
+;
+          width: 300px;
+          height: 120px;
+          padding-left: 20px;
+        }
+        .content-4,
+        .content-3 {
+          font-size: 17px;
+          font-family: sans;
+          background-color: white
+;
+          width: 300px;
+          height: 120px;
+          padding-left: 20px;
+        }
+        .first{
+          padding-left: 20px;
+        }
+        .article {
+          display: flex;
+          padding-top: 2px;
+          padding-bottom: 20px;
+        }
+        .content-2{
+          color: black;
+          font-family: sans;
+          background-color: white;
+          width: 500px;
+          height: 120px;
+          padding-left: 20px;
+          padding-top: 10px;
+        }
+        .upper> .article{
+          padding-top: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="upper">
+        <img src="./image/img-1.jpg" width="380px" height="140px" alt="" />
+        <p id="heading">
+          Ahmedabad joint rally with Trump will be historic, says Modi
+        </p>
+        <div class="content-1">
+          <p class="name">Kallol Bhattacherjee</p>
+          <p class="name">Sushansini Haidar</p>
+          <p class="line">
+            U.S President to visit Sabarmati Ashram ahead of 'Namaste Trump'
+            event
+          </p>
+        </div>
+        <div class="article">
+          <img src="https://via.placeholder.com/100" alt="" />
+          <div class="content-2">
+            <p class="one">THE HUDDLE</p>
+            <p class="two">Ahmedabad gliters to welcome Donald Trump</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="lower">
+        </div>
+        <div class="right">
+          <div class="first">
+            <div class="article">
+              <img src="https://via.placeholder.com/100" alt="" />
+              <div class="content-3">
+                <p class="one">THE HUDDLE</p>
+                <p class="two">Ahmedabad gliters to welcome Donald Trump</p>
+              </div>
+            </div>
+            <div class="article">
+              <img src="https://via.placeholder.com/100" alt="" />
+              <div class="content-4">
+                <p class="one">NATIONAL</p>
+                <p class="two">
+                  Over 10 lakh Kashmir students to don school uniforms after
+                  seven months
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="second">
+            <div class="article">
+              <img src="https://via.placeholder.com/100" alt="" />
+              <div class="content-5">
+                <p class="one">NATIONAL</p>
+                <p class="two">
+                  Some restrictions impossed on export of medical equipmenet to
+                  China, says MEA
+                </p>
+              </div>
+            </div>
+            <div class="article">
+              <img src="https://via.placeholder.com/100" alt="" />
+              <div class="content-6">
+                <p class="one">THE HUDDLE</p>
+                <p class="two">
+                  Only "a microsopic minitory" protesting against CAA:Tejaswi
+                  Surya
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
