@@ -1,7 +1,7 @@
 let check = function(num){
     let product = 1;
-    for(let i = 1; i <= num.length; i++) {
-        product *= i;
+    for(let i = 0; i < num.length; i++) {
+        product *= num[i];
     }
     return product;
 } 
@@ -11,7 +11,7 @@ let check = function(num){
  }
  
  if (process.env.USERNAME === "mansi") {
-     runProgram(`1 2 3 4 5 6 `);
+     runProgram(`16 9 17 10 10 8`);
  } else {
      process.stdin.resume();
      process.stdin.setEncoding("ascii");
