@@ -1,12 +1,14 @@
 //Enter code here 
 let check = function(arr){
+    let isPresent = false;
     for (let i = 0; i < arr.length; i++) {
         if (42 === arr[i]) {
+            isPresent = true;
            console.log("Yes")
         }
-        else{
-            console.log("No")
-        }
+    }
+    if (!isPresent){
+        console.log("No");
     }
 }
 const runProgram = (input) => {
@@ -18,7 +20,7 @@ const runProgram = (input) => {
 
 if (process.env.USERNAME === "mansi") {
    runProgram(`5
-   3 7 42 9 8`);
+   3 7 42 2 8`);
 } else {
    process.stdin.resume();
    process.stdin.setEncoding("ascii");
