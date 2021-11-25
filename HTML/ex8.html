@@ -1,106 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-    .part-1{
-        /* padding: 20px; */
+      .part-1 {
         margin-right: 45px;
         margin-left: 45px;
-        /* line-height: 2.5em;  */
-        /* background-color: lightcoral; */
-        }  
-    form{
+      }
+      form {
         width: 210px;
         font-weight: bold;
         font-size: 20px;
-    }
-    .main{
+      }
+      .main {
         color: red;
         font-size: 20px;
-    }
-    .btn{
+      }
+      .btn {
         border: solid 0.1rem;
         width: 200px;
         height: 35px;
-    }
-    .bttnn{
-       background-color: black;
-       color: white;
-       border: none;
-       width: 210px;
-       height: 50px;
-       margin-top: 100px;
-    }
-    .part-2{
+      }
+      .bttnn {
+        background-color: black;
+        color: white;
+        border: none;
+        width: 210px;
+        height: 50px;
+        margin-top: 100px;
+      }
+      .part-2 {
         background-color: black;
         color: whitesmoke;
         width: 260px;
         height: 380px;
         padding: 20px;
         margin: 20px;
-        /* letter-spacing: 0.3rem; */
-
-    }
-     #small{
-         font-size: 20px;
-         /* letter-spacing: 0.2em; */
-     }
-     .small{
-         font-size:27px;
-         font-weight: lighter;
-         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-     }
-
-     .input-div{
-         margin-top: 14px;
-     }
-     .big{
-         font-size: 50px;
-         line-height: 0.5rem;
-     }
-    @media (min-width : 768px) {
-        .container{
-            margin: auto;
-            display: flex;
-        }
-    }
+      }
+      #small {
+        font-size: 20px;
+      }
+      .small {
+        font-size: 27px;
+        font-weight: lighter;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+      .input-div {
+        margin-top: 14px;
+      }
+      .big {
+        font-size: 50px;
+        line-height: 0.5rem;
+      }
+      a{
+          font-size: 25px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="part-1">
-            <form action="">
-                <div class="input-div">
-                    <label for="">NAME</label>
-                <input class="btn", type="text">
-                </div>
+      <div class="part-1">
+        <form action="">
+          <div class="input-div">
+            <label for="">NAME</label>
+            <input class="btn" , type="text" />
+          </div>
+          <div class="input-div">
+            <label for="">EMAIL</label>
+            <input class="btn" , type="text" />
+          </div>
 
-                <div class="input-div">
-                    <label for="">EMAIL</label>
-                <input class="btn", type="text">
-                </div>
+          <div class="input-div">
+            <label for="">MOBILE</label>
+            <input class="btn" , type="number" />
+          </div>
 
-                <div class="input-div">
-                    <label for="">MOBILE</label>
-                <input class="btn", type="number">
-                </div>
-                
-                <h3 class="main">Enter a valid mobile</h3>
-                <button type="submit", class="bttnn">REGISTER</button>
-            </form>
-        </div>
-        <div class="part-2">
-            <p class="small">NAME</p>
-            <p class="big">MASAI</p>
-            <p class="small">EMAIL</p>
-            <P id="small">email@masaischool.com</P>
-            <p class="small">MOBILE</p>
-            <P class="small">9876543210</P>
-        </div>
+          <h3 class="main">Enter a valid mobile</h3>
+          <button type="submit" class="bttnn"><a href="https://www.freecodecamp.org/">REGISTER</a></button>
+        </form>
+      </div>
     </div>
-</body>
+  </body>
 </html>
