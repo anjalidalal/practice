@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div class="green">First DIV</div>
+        <div class="red">Second DIV</div>
+        <div class="blue">Third DIV</div>
+        <p class="green">First P</p>
+        <p class="red">Second P</p>
+        <p class="blue">Third P</p>
+        <hr/>
+        <button onclick="oneH()">Change H1</button>
+        <button onclick="threeH()">Change H3</button>
+        <button onclick="fiveH()">Change H5</button>
+        <button onclick="green1()">Change Green</button>
+        <button onclick="red2()">Change Red</button>
+        <button onclick="blue3()">Change Blue</button>
+        <script>
+            function oneH(){
+                document.querySelector('h1').style.color = "red"
+            }
+            function threeH(){
+                document.querySelector('h3').style.color = "green"
+            }
+            function fiveH(){
+                document.querySelector('h5').style.color = "blue"
+            }
+            function green1(){
+                document.getElementsByClassName('green').style.color = "green"
+            }
+            function red2(){
+                document.getElementsByClassName('red').style.color = "red"
+            }
+            function blue3(){
+                document.getElementsByClassName('blue').style.color = "blue"
+            }
+        </script>
+</body>
+</html>
