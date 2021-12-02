@@ -10,7 +10,7 @@ const runProgram = (input) => {
 }
 
 if (process.env.USERNAME === "mansi") {
-   runProgram(`4 20`);
+   runProgram(`4 10`);
 } else {
    process.stdin.resume();
    process.stdin.setEncoding("ascii");
