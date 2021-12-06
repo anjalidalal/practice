@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+        }
+        body{
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: auto;
+        }
+        .main{
+            margin-top: 30px;
+        }
+        .upper{
+            background-color: rgba(194, 165, 165, 0.37);
+            width: 500px;
+            height: 330px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .upper > img{
+            width : 150px;
+            height: 200px;
+        }
+        .name{
+            color: rgb(7, 7, 119);
+            font-size: 36px;
+            line-height: 2em;
+        }
+        .upper > div {
+            font-size: 30px;
+            line-height: 2em;
+        }
+        .middle > img{
+            width : 150px;
+            height: 150px;
+        }
+        .middle{
+            display: flex;
+            background-color: whitesmoke;
+            width: 800px;
+            margin: auto;
+            padding: 0px 10px;
+            margin-top: 30px;
+        }
+        .content{
+            padding: 0px 20px;
+        }
+        .content > h1{
+            color: rgb(243, 42, 7);
+        }
+        .content > p{
+            padding: 15px 0px;
+            font-size: 17px;
+            line-height: 1.3em;
+        }
+        .lower{
+            display: flex;
+            gap: 25px;
+            background-color: rgba(190, 78, 4, 0.89);
+            width: 870px;
+            height: 100px;
+            margin: auto;
+            padding: 30px;
+            margin-top: 30px;
+        }
+        h4{
+            color: white;
+            font-weight: normal;
+            font-size: 23px;
+        }
+        .left > p{
+            padding: 20px 0px;
+            font-size: 17px;
+        }
+        .right > p{
+            padding: 20px 0px;
+            font-size: 17px;
+        }
+        .right{
+            text-align: right;
+            width: 400px;
+            line-height: 1.5em;
+        }
+        .left{
+            text-align: left;
+            width: 400px;
+            line-height: 1.5em;
+        }
+        .line{
+            width: 5px;
+            height: 110px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="upper">
+            <img src="./image/linus.jpg" alt="">
+            <h1 class="name">Linus Torvalds</h1>
+            <div>The creator of Linux & Git</div>
+        </div>
+        <div class="middle">
+            <img src="./image/khan.jpg" alt="">
+            <div class="content">
+                <h1>Sal Khan</h1>
+                <p>Salman Khan is the founder of the Khan Academy which
+                which has a mission of provinding a free world-class education
+                for anyone, anywhere.
+                </p>
+            </div>
+        </div>
+        <div class="lower">
+            <div class="left">
+                <h4>Ken Thomposon</h4>
+                <p>Designed and implemented the orignal Unix operating system</p>
+            </div>
+            <div class="line"></div>
+            <div class="right">
+                <h4>Dennis Ritchie</h4>
+                <p>The creator of C Programming Language</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
