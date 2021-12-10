@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            font-size: 28px;
+        }
+    </style>
 </head>
 <body>
     <h1>First H1</h1>
@@ -21,31 +26,66 @@
         <p class="red">Second P</p>
         <p class="blue">Third P</p>
         <hr/>
-        <button onclick="oneH()">Change H1</button>
-        <button onclick="threeH()">Change H3</button>
-        <button onclick="fiveH()">Change H5</button>
-        <button onclick="green1()">Change Green</button>
-        <button onclick="red2()">Change Red</button>
-        <button onclick="blue3()">Change Blue</button>
+        <button class="btn1">Change H1</button>
+        <button class="btn2">Change H3</button>
+        <button class="btn3">Change H5</button>
+        <button class="btnGreen">Change Green</button>
+        <button class="btnRed">Change Red</button>
+        <button class="btnBlue">Change Blue</button>
         <script>
-            function oneH(){
-                document.querySelector('h1').style.color = "red"
+            let headingOne = document.querySelector("h1");
+            let headingThree = document.querySelectorAll("h3");
+            let headingFive = document.querySelectorAll("h5");
+            let classGreen = document.querySelectorAll(".green");
+            let classRed = document.querySelectorAll(".red");
+            let classBlue = document.querySelectorAll(".blue");
+   
+            let myBtnOne = document.querySelector(".btn1");
+            myBtnOne.addEventListener("click", myFunctionOne)
+            function myFunctionOne () {
+                headingOne.style.color = "red";
             }
-            function threeH(){
-                document.querySelector('h3').style.color = "green"
+
+            let myBtnTwo = document.querySelector(".btn2");
+            myBtnTwo.addEventListener("click", myFunctionTwo)
+            function myFunctionTwo () {
+                for (let i = 0; i < headingThree.length; i++) {
+                   headingThree[i].style.color = "green" 
+                }
             }
-            function fiveH(){
-                document.querySelector('h5').style.color = "blue"
+
+            let myBtnThree = document.querySelector(".btn3");
+            myBtnThree.addEventListener("click", myFunctionThree)
+            function myFunctionThree () {
+                for (let i = 0; i < headingFive.length; i++) {
+                   headingFive[i].style.color = "blue" 
+                }
             }
-            function green1(){
-                document.getElementsByClassName('green').style.color = "green"
+
+            let myBtnGreen = document.querySelector(".btnGreen");
+            myBtnGreen.addEventListener("click", myFunctionGreen)
+            function myFunctionGreen () {
+                for (let i = 0; i < classGreen.length; i++) {
+                   classGreen[i].style.color = "green" 
+                }
             }
-            function red2(){
-                document.getElementsByClassName('red').style.color = "red"
+
+            let myBtnRed = document.querySelector(".btnRed");
+            myBtnRed.addEventListener("click", myFunctionRed)
+            function myFunctionRed () {
+                for (let i = 0; i < classRed.length; i++) {
+                   classRed[i].style.color = "red" 
+                }
             }
-            function blue3(){
-                document.getElementsByClassName('blue').style.color = "blue"
+
+            let myBtnBlue = document.querySelector(".btnBlue");
+            myBtnBlue.addEventListener("click", myFunctionBlue)
+            function myFunctionBlue () {
+                for (let i = 0; i < classBlue.length; i++) {
+                   classBlue[i].style.color = "blue" 
+                }
             }
+
         </script>
 </body>
 </html>
