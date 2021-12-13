@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Select the Gender</p>
+    <select id="Gender">
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+    </select>
+    <p>Enter the birth year</p>
+    <input type="number" name="birth" id="birth" />
+    <button id="btn" onclick="validation()">Submit</button>
+    <script>
+        function validation() {
+            let gen = document.getElementById("Gender");
+
+            let a = document.querySelector("input");
+            let year_of_birth = Number(a.value)
+            let age = 2021 - year_of_birth;
+            if (a.value.length < 4) {
+                alert("Enter a valid year");
+            }
+            if (gen.value == "Male") {
+                if (age >= 21) {
+                    alert("Valid age to get married")
+                }
+                else{
+                    alert("Not valid age to get married");
+                }
+            }
+            else if (gen.value == "Female") {
+                if (age >= 18) {
+                    alert("Valid age to get married")
+                }
+                else{
+                    alert("Not valid age to get married");
+                }
+            } 
+        }
+    </script>
+</body>
+
+</html>
