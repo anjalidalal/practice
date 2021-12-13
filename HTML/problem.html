@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <div id="headings">
+            <h5>First H5</h5>
+            <h5>Second H5</h5>
+            <h5>Third H5</h5>
+        </div>
+        <div id="cont">
+            <div class="green">First DIV</div>
+            <div class="red">Second DIV</div>
+            <div class="blue">Third DIV</div>
+            <p class="green">First P</p>
+            <p class="red">Second P</p>
+            <p class="blue">Third P</p>
+        </div>
+        <hr/>
+        <button class="btnRemoveH1" onclick="remove_H1()">Remove H1</button>
+        <button class="btnRemoveH3" onclick="remove_H3()">Remove H3</button>
+        <button class="btnRemoveH5" onclick="remove_H5()">Remove H5</button>
+        <button class="btnRemoveRed" onclick="remove_Classes()">Remove Red</button>
+        <button class="btnRemoveDivs" onclick="remove_DIVS()">Remove DIVS</button>
+        <script>
+           function remove_H1 () {
+               let heading_1 = document.querySelectorAll("h1");
+               heading_1[0].remove();
+           }
+           function remove_H3 () {
+               let heading_3 = document.querySelectorAll("h3");
+               heading_3[0].remove();
+               heading_3[1].remove();
+           }
+           function remove_H5 () {
+               let heading_5 = document.querySelectorAll("h5");
+               heading_5[0].remove();
+               heading_5[1].remove();
+               heading_5[2].remove();
+           }
+            function remove_DIVS() {
+               let parent = document.getElementById("cont");
+               let div_ch = parent.querySelectorAll("div");
+               for (let i = 0; i < div_ch.length; i++) {
+                   div_ch[i].remove();
+               }   
+            }
+            function remove_Classes() {
+               let idCont = document.getElementById("cont");
+               let red_Class = idCont.getElementsByClassName("red")
+               for (let i = 0; i < red_Class.length; i++) {
+                   red_Class[i].remove();
+               }
+            }
+        </script>
+</body>
+</html>
