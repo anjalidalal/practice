@@ -1,32 +1,24 @@
-function transpose_arr(newArr) {
-    for (let i = 0; i < newArr[0].length; i++){
-        let newRow = [];
-        for (let j = 0; j < newArr[0].length; j++) {
-            newRow.push(newArr[j][i])
+function check(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < 85) {
+            console.log("Enter")
         }
-        transpose.push(newRow);
+        else {
+            console.log("Beep")
+        }
     }
-    console.log(transpose);   
-
 }
 const runProgram = (input) => {
     let lines = input.trim().split("\n");
-    let newArr = [];
-    for (let i = 1; i < lines.length; i++) {
-        let arr = lines[i].trim().split(" ").map(Number);
-        newArr.push(arr);
-    }
-    console.log(newArr);
-    transpose_arr(newArr)
+    let arr = lines[1].trim().split(" ").map(Number);
+    // console.log(arr);
+
+    check(arr)
 }
 
 if (process.env.USERNAME === "mansi") {
-    runProgram(`5 4
-    0 0 0 0
-    1 1 1 1
-    2 2 2 2
-    3 3 3 3
-    4 4 4 4`);
+    runProgram(`5
+    24 83 89 43 91`);
 } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
