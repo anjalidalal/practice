@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-size: 24px;
+      }
+      form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+      }
+      input {
+        width: 200px;
+        height: 40px;
+        margin: 10px;
+        font-size: 20px;
+      }
+      table {
+        border: 2px solid black;
+        padding: 20px;
+        margin: auto;
+      }
+      td {
+        border: 1px solid grey;
+        padding: 10px;
+      }
+      label {
+        font-size: 28px;
+      }
+      select {
+        width: 210px;
+        height: 50px;
+        margin: 10px;
+        font-size: 20px;
+      }
+      #submit {
+        width: 220px;
+        height: 50px;
+        font-size: 22px;
+      }
+      #submit:hover {
+        background-color: cornflowerblue;
+        color: whitesmoke;
+        border-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label>Name</label>
+      <input type="text" id="name" />
+      <label>Quantity</label>
+      <input type="number" id="quantity" />
+      <label>Priority</label>
+      <select id="priority">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      <input type="submit" name="Submit" id="submit" />
+    </form>
+    <hr />
+    <table>
+      <tr>
+        <td>Name</td>
+        <td>Quantity</td>
+        <td>Priority</td>
+        <td>Complete</td>
+        <td>Delete</td>
+      </tr>
+    </table>
+    <script>
+      let form = document.querySelector("form");
+      let count = 1;
+      let add_data = function (event) {
+        event.preventDefault();
+        let name = document.getElementById("name").value;
+        let quantity = document.getElementById("quantity").value;
+        let priority = document.getElementById("priority").value;
+        createItem(name, quantity, priority);
+      }
+  
+      function createItem(name, quantity, priority) {
+        let parent = document.querySelector("table");
+        let row_2 = document.createElement("tr");
+        let col_1 = document.createElement("td");
+        col_1.textContent = name;
+        let col_2 = document.createElement("td");
+        col_2.textContent = quantity;
+        let col_3 = document.createElement("td");
+        col_3.textContent = priority;
+        let col_4 = document.createElement("td");
+        col_4.textContent = "Complete-" + count;
+        let col_5 = document.createElement("td");
+        col_5.textContent = "Delete-" + count;
+
+        row_2.appendChild(col_1);
+        row_2.appendChild(col_2);
+        row_2.appendChild(col_3);
+        row_2.appendChild(col_4);
+        row_2.appendChild(col_5);
+
+        parent.appendChild(row_2);
+
+        count++;
+      }
+      form.addEventListener("submit", add_data);
+    </script>
+  </body>
+</html>
