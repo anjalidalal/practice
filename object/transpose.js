@@ -1,10 +1,11 @@
 function transpose_arr(newArr) {
+    let transpose = "";
     for (let i = 0; i < newArr[0].length; i++){
         let newRow = [];
         for (let j = 0; j < newArr[0].length; j++) {
             newRow.push(newArr[j][i])
         }
-        transpose.push(newRow);
+        transpose += (newRow);
     }
     console.log(transpose);   
 
@@ -16,7 +17,7 @@ const runProgram = (input) => {
         let arr = lines[i].trim().split(" ").map(Number);
         newArr.push(arr);
     }
-    console.log(newArr);
+    // console.log(newArr);
     transpose_arr(newArr)
 }
 
