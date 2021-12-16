@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            margin: auto;
+            height: 100vh;
+        }
+        #main{
+          background-color: cornflowerblue;
+          width: 700px;
+          height: 400px; 
+          margin: auto;
+          margin-top: 80px;
+          padding: 30px;
+          border-radius: 12px;
+          position: relative;
+        }
+        #btn{
+            width: 250px;
+            height: 70px;
+            border: 1.5px solid black;
+            border-radius: 12px;
+            font-size: 17px;
+        }
+        .submit{
+            position: absolute;
+            left: 470px;
+            top: 350px;
+        }
+    </style>
+</head>
+<body>
+     <div id="main">
+        <div class="submit"><button id="btn">Submit</button></div>
+     </div>
+    <script>
+        let button = document.getElementById("btn");
+        let div = document.getElementById("main");
+        function btnGreen() {
+            button.style.backgroundColor = "darkgreen";
+        }
+        div.addEventListener("mouseover", btnGreen)
+        function btnRed() {
+            button.style.backgroundColor = "darkred";
+        }
+        div.addEventListener("mouseout", btnRed)
+
+    </script>
+</body>
+</html>
