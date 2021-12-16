@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        text-align: center;
+        padding: 50px;
+        margin: 50px;
+      }
+      #heading{
+        font-size: 40px;
+
+      }
+      button{
+        padding: 20px;
+        margin: 30px;
+        width: 400px;
+        height: 70px;
+        font-size: 25px;
+        border-radius: 5px;
+      }
+      button:hover{
+        background-color: rgb(136, 172, 240);
+        color: white;
+      }
+    </style>
+</head>
+<body>
+    <h1 id="heading">My color should change when I double click the button!</h1>
+  <button id="btn">Click here to change my color</button>
+  <script>
+    let heading = document.getElementById("heading");
+    function random_Num() {
+      let x = Math.floor(Math.random()*300);
+      return x;
+    }
+    function random_color() {
+        let randCol = 'rgb(' + random_Num() + ',' + random_Num() + ',' + random_Num() +')';
+        heading.style.color = randCol;
+    }
+    document.getElementById("btn").addEventListener("dblclick", random_color)
+  </script>
+</body>
+</html>
