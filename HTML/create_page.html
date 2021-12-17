@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{
+            margin: 0%;
+        }
+         .right{
+            text-align: right;
+            width: 400px;
+            line-height: 1.5em;
+        }
+        .left{
+            text-align: left;
+            width: 400px;
+            line-height: 1.5em;
+        }
+        .line{
+            width: 5px;
+            height: 110px;
+            background-color: black;
+        }
+        .lower{
+            display: flex;
+            gap: 25px;
+            background-color: rgba(190, 78, 4, 0.89);
+            width: 870px;
+            height: 100px;
+            margin: auto;
+            padding: 30px;
+            margin-top: 30px;
+        }
+        .middle{
+            display: flex;
+            background-color: whitesmoke;
+            width: 800px;
+            margin: auto;
+            padding: 0px 10px;
+            margin-top: 30px;
+        }
+        .content{
+            padding: 0px 20px;
+        }
+        .main{
+            margin-top: 30px;
+        }
+        .upper{
+            background-color: rgba(194, 165, 165, 0.37);
+            width: 500px;
+            height: 330px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .name{
+            color: rgb(7, 7, 119);
+            font-size: 36px;
+            line-height: 2em;
+        }
+        .lower_p {
+          padding: 20px 0px;
+          font-size: 17px;
+        }
+        .head_4{
+            color: white;
+            font-weight: normal;
+            font-size: 23px;
+        }
+        .btnn{
+          display: flex;
+          justify-content: center;
+          margin: 30px;
+        }
+        #btn{
+          width: 200px;
+          height: 50px;
+          font-size: 22px;
+          border-radius: 12px;
+        }
+        #btn:hover{
+          background-color: rgba(190, 78, 4, 0.89);
+          color: whitesmoke;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="btnn"><button id="btn">Create Page</button></div>
+     <script>
+       let main_div = document.createElement("div");
+       main_div.setAttribute('class', 'main');
+
+       let upper_div = document.createElement("div");
+       upper_div.setAttribute('class', 'upper');
+
+       let image1 = document.createElement("img");
+       image1.src = "./image/linus.jpg";
+       image1.style.width = "150px";
+       image1.style.height = "200px";
+
+       let first_H1 = document.createElement("h1");
+       first_H1.setAttribute('class', 'name');
+       first_H1.textContent = "Linus Torvalds";
+
+       let div = document.createElement("div");
+       div.textContent = "The creator of Linux & Git";
+       div.style.fontSize = "27px";
+       div.style.lineHeight = "2em";
+
+       let middle_div = document.createElement("div");
+       middle_div.setAttribute('class', 'middle');
+
+       let image2 = document.createElement("img");
+       image2.src = "./image/khan.jpg";
+       image2.style.width = "150px";
+       image2.style.height = "150px";
+
+       let content_div = document.createElement("div");
+       content_div.setAttribute('class', 'content');
+
+       let second_H1 = document.createElement("h1");
+       second_H1.textContent = "Sal Khan";
+       second_H1.style.color = "rgb(243, 42, 7)";
+
+       let p_1 = document.createElement("p");
+       p_1.textContent = "Salman Khan is the founder of the Khan Academy which which has a mission of provinding a free world-class educationfor anyone, anywhere";
+       p_1.style.padding = "15px 0px";
+       p_1.style.fontSize = "17px";
+       p_1.style.lineHeight = "1.3em";
+
+       let lower_div = document.createElement("div");
+       lower_div.setAttribute('class', 'lower');
+
+       let left_div = document.createElement("div");
+       left_div.setAttribute('class', 'left');
+
+       let first_H4 = document.createElement("h4");
+       first_H4.textContent = "Ken Thomposon";
+       first_H4.setAttribute("class", "head_4");
+
+       let p_2 = document.createElement("p");
+       p_2.textContent = "Designed and implemented the orignal Unix operating system";
+       p_2.setAttribute('class', 'lower_p');
+
+       let line_div = document.createElement("div");
+       line_div.setAttribute('class', 'line')
+
+       let right_div = document.createElement("div");
+       right_div.setAttribute('class', 'right');
+
+       let second_H4 = document.createElement("h4");
+       second_H4.textContent = "Dennis Ritchie";
+       second_H4.setAttribute("class", "head_4");
+
+       let p_3 = document.createElement("p");
+       p_3.textContent = "The creator of C Programming Language";
+       p_3.setAttribute('class', 'lower_p');
+
+       upper_div.appendChild(image1);
+       upper_div.appendChild(first_H1);
+       upper_div.appendChild(div);
+
+       content_div.appendChild(second_H1);
+       content_div.appendChild(p_1);
+       
+       middle_div.appendChild(image2);
+       middle_div.appendChild(content_div);
+
+       left_div.appendChild(first_H4);
+       left_div.appendChild(p_2);
+
+       right_div.appendChild(second_H4);
+       right_div.appendChild(p_3);
+
+       lower_div.appendChild(left_div);
+       lower_div.appendChild(line_div);
+       lower_div.appendChild(right_div);
+
+       main_div.appendChild(upper_div);
+       main_div.appendChild(middle_div);
+       main_div.appendChild(lower_div);
+       
+       function create_page() {
+         let body = document.querySelector("body");
+         body.appendChild(main_div);
+         body.style.boxSizing = "border-box";
+         body.style.fontFamily = "Arial, Helvetica, sans-serif";
+         body.style.margin = "auto";
+       }
+       document.getElementById("btn").addEventListener("click", create_page)
+    </script>
+  </body>
+</html>
