@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0%;
+      }
+      body {
+        box-sizing: border-box;
+        background-color: black;
+      }
+      .main {
+        background-color: white;
+        max-width: 700px;
+        height: 700px;
+        margin: auto;
+      }
+      .upper {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+      }
+      .min {
+        background-color: rgb(179, 36, 36);
+        width: 170px;
+        height: 80px;
+        border: 2px solid black;
+      }
+      .max {
+        background-color: rgb(19, 139, 19);
+        width: 170px;
+        height: 80px;
+        border: 2px solid black;
+      }
+      .tag {
+        font-size: 28px;
+        font-family: sans-serif;
+        text-align: center;
+        padding: 10px;
+      }
+      .current_score {
+        width: 210px;
+        height: 100px;
+        background-color: gray;
+        border: 2px solid black;
+      }
+      .num {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        gap: 10px;
+      }
+      .numbers {
+        background-color: orange;
+        text-align: center;
+        font-size: 35px;
+        border: 2px solid black;
+        padding: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      .lower {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 0%;
+      }
+      .t {
+        font-size: 30px;
+        font-family: sans-serif;
+        color: black;
+      }
+      .enter {
+        background-color: black;
+        color: white;
+        width: 210px;
+        height: 70px;
+        text-align: center;
+        font-size: 27px;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="upper">
+        <div class="left">
+          <div class="min"></div>
+          <div class="tag">MIN</div>
+        </div>
+        <div class="right">
+          <div class="max"></div>
+          <div class="tag">MAX</div>
+        </div>
+      </div>
+      <div class="lower">
+        <div class="t">SCORE</div>
+        <div class="current_score"></div>
+        <div class="num">
+          <button onclick="onClickNumber(1)" class="numbers">1</button>
+          <button onclick="onClickNumber(2)" class="numbers">2</button>
+          <button onclick="onClickNumber(3)" class="numbers">3</button>
+          <button onclick="onClickNumber(4)" class="numbers">4</button>
+          <button onclick="onClickNumber(5)" class="numbers">5</button>
+          <button onclick="onClickNumber(6)" class="numbers">6</button>
+          <button onclick="onClickNumber(7)" class="numbers">7</button>
+          <button onclick="onClickNumber(8)" class="numbers">8</button>
+          <button onclick="onClickNumber(9)" class="numbers">9</button>
+        </div>
+        <div class="zero">
+          <button onclick="onClickNumber(0)" class="numbers">0</button>
+        </div>
+        <div><button onclick="onClickEnter()" class="enter">ENTER</button></div>
+      </div>
+    </div>
+    <script>
+      function onClickNumber(number) {
+        let currentScoreEl = document.querySelector(".current_score");
+        currentScoreEl.textContent += number.toString();
+        currentScoreEl.style.fontSize = "30px";
+      }
+      function onClickEnter(number) {
+        let minBox = document.querySelector(".min");
+        minBox.style.fontSize = "30px";
+        let maxBox = document.querySelector(".max");
+        maxBox.style.fontSize = "30px";
+        let currentScoreEl = document.querySelector(".current_score");
+
+        let currentScore = currentScoreEl.textContent;
+
+        if(minBox.textContent.length == 0){
+          minBox.textContent = currentScore;
+          maxBox.textContent = currentScore;
+        }
+        else if(Number(minBox.textContent) > Number(currentScore)){
+           minBox.textContent = currentScore;
+        }
+        else if(Number(maxBox.textContent) < Number(currentScore)){
+           maxBox.textContent = currentScore;
+        }
+        currentScoreEl.textContent = "";
+      }
+    </script>
+  </body>
+</html>
