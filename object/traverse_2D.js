@@ -1,10 +1,10 @@
 function traverse2D(newArr) {
     let newRow = [];
-    for (let i = newArr[0].length-1; i >= 0; i--) {
-       for (let j = 0; j < newArr.length; j++) {
+    for (let i = 0; i < newArr[0].length; i++) {
+       for (let j = newArr.length-1; j >= 0; j--) {
            newRow.push(newArr[j][i]);       
        } 
-    }    
+    } 
     console.log(newRow.join(" "))
 }
 const runProgram = (input) => {
