@@ -1,43 +1,40 @@
-let checkIsIncreasing = function(arr){
+let arrSumEven = function(arr) {
+    let count = 0;
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i] >= arr[i+1]) {
-            return false;
-        }
-    }
-    return true;
-}
-let check = function (arr) {
-    let maxLength = 0;
-    for (let i = 0; i < arr.length; i++) {
-       
         for (let j = i; j < arr.length; j++) {
-            let newArr = [];
-           for (let k = i; k <= j; k++) {
-             newArr.push(arr[k]);
-           }
-           if (checkIsIncreasing(newArr)) {
-               c  }
+           let newRow = [];
+            for (let k = i; k <= j; k++) {
+               newRow.push(arr[k]);
+            }
+            if (arrSum(newRow)) {
+               count++;
+            }
         }
-        
     }
-    return maxLength;
+    console.log(count)
 }
 
+
+let arrSum = function(newRow) {
+    let sum = 0;
+    for (let i = 0; i < newRow.length; i++) {
+        sum += newRow[i];
+    }
+    if (sum % 2 == 0) {
+        return true;
+    }
+    return false;
+}
 const runProgram = (input) => {
     let lines = input.trim().split("\n");
-    for (let i = 2; i < lines.length; i += 2) {
-        let arr = lines[i].trim().split(" ").map(Number);
-        // console.log(arr);
-       console.log(check(arr))
-    }
+    let arr = lines[1].trim().split(" ").map(Number);
+    // console.log(arr);
+    arrSumEven(arr);
 }
 
 if (process.env.USERNAME === "mansi") {
-    runProgram(`2
-   2
-   1 1
-   6
-   1 2 1 2 3 1`);
+    runProgram(`5
+    2 5 4 4 4`);
 } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
@@ -56,3 +53,4 @@ if (process.env.USERNAME === "mansi") {
         process.exit(0);
     });
 }
+

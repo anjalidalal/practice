@@ -1,29 +1,16 @@
-let check = function(str){
-    for (let i = 0; i < str.length; i++) {
-        for (let j = i; j < str.length; j++) {
-            let newStr = "";
-            for (let k = i; k <= j; k++) {
-                newStr += str[k];
-            }
-            console.log(newStr)
-        }
-    }
-}
-
+//Enter code here
 const runProgram = (input) => {
-    let lines = (input.trim().split("\n"));
-    for (let i = 1; i < lines.length; i+=2) {
-        let str = lines[2].trim();
-        console.log(str);
-        check(str);
-        break;
+    let lines = (input.trim().split(" "));
+        console.log(lines)
+        let a = lines[0].trim().split(" ").map(Number);
+        let c = lines[1].trim().split(" ").map(String);
+        let b = lines[2].trim().split(" ").map(Number);
+        console.log(a, b, c);
+        console.log(a)
     }
-}
 
 if (process.env.USERNAME === "mansi") {
-   runProgram(`1
-   4
-   aman`);
+   runProgram(`2 * 3`);
 } else {
    process.stdin.resume();
    process.stdin.setEncoding("ascii");

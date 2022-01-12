@@ -5,15 +5,17 @@ let arr = [
 ];
 let r = 3;
 let c = 3;
-for (let i = 0; i < r; i++) {
-    for (let j = 0; j < c; j++) {
+for (let i = 0; i < arr.length; i++) {
+    let newrow = []
+    for (let j = 0; j < arr.length; j++) {
         if (i - j == -1) {
-            console.log(arr[i][j]);
+           newrow.push(arr[i][j]);
         }
         else if (i + j == 3) {
-            console.log(arr[j][i]);
-            console.log(arr[i][j])
+            newrow.push(arr[j][i]);
+            newrow.push(arr[i][j])
         }
+       
     }
-    
+     console.log(newrow)
 }

@@ -1,29 +1,23 @@
 let check = function(str){
     for (let i = 0; i < str.length; i++) {
-        for (let j = i; j < str.length; j++) {
-            let newStr = "";
-            for (let k = i; k <= j; k++) {
-                newStr += str[k];
-            }
-            console.log(newStr)
+        if (str[i] = '420'){
+            console.log("C")
+        }
+        else {
+            console.log("E");
         }
     }
 }
-
 const runProgram = (input) => {
-    let lines = (input.trim().split("\n"));
-    for (let i = 1; i < lines.length; i+=2) {
-        let str = lines[2].trim();
-        console.log(str);
-        check(str);
-        break;
-    }
+    let line = input.trim();
+    let str = String(line);
+    console.log(str)
+    check(str);
+
 }
 
 if (process.env.USERNAME === "mansi") {
-   runProgram(`1
-   4
-   aman`);
+   runProgram(`masaischool`);
 } else {
    process.stdin.resume();
    process.stdin.setEncoding("ascii");

@@ -1,29 +1,29 @@
-function maxElement(str) {
-    let obj = {};
-    for (let i = 0; i < str.length; i++) {
-        if (obj[str[i]]) {
-            obj[str[i]] = obj[str[i]] + 1;
+function rotate_arr(arr){
+    for (let i = 0; i < arr[0].length; i++) {
+        let newrow = [];
+        for (let j = arr.length-1; j >= 0; j--) {
+            newrow.push(arr[j][i])
         }
-        else {
-            obj[str[i]] = 1;
-        }
-    }
-    console.log(obj);
-    for (let key in obj) {
-        console.log(`${key}-${obj[key]}`)
+        console.log(newrow.join(" "))
     }
 }
+
+
 const runProgram = (input) => {
     let lines = input.trim().split("\n");
-    let str = lines[1].trim();
-    console.log(str);
-
-    maxElement(str)
+    for (let i = 1; i < lines.length; i++) {
+        let arr = lines[1].trim().split(" ").map(Number)
+        console.log(arr)
+        rotate_arr(arr)
+    }
 }
 
-if (process.env.USERNAME === "anjali") {
+if (process.env.USERNAME === "mansi") {
     runProgram(`4
-    aman`);
+    1 2 3 4
+    5 6 7 8
+    1 2 3 4
+    5 6 7 8`);
 } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
