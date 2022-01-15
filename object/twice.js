@@ -14,43 +14,35 @@ function frequency(arr) {
         }
     }
 }
-let arr = [1, 2, 1, 3, 2]
-frequency(arr);
-// const runProgram = (input) => {
-//     let lines = input.trim().split("\n");
-//     let newArr = [];
-//     for (let i = 1; i < lines.length; i++) {
-//         let arr = lines[i].trim().split(" ").map(Number);
-//         newArr.push(arr);
-//     }
-//     for (let i = 1; i < newArr.length; i+=2) {
-//     //    console.log(newArr[i]);
-//        frequency(newArr);
-//     }
+const runProgram = (input) => {
+    let lines = input.trim().split("\n");
     
-// }
+    for (let i = 2; i < lines.length; i+=2) {
+        let arr = lines[i].trim().split(" ").map(Number);
+        frequency(arr);
+    }
+  
+}
 
-// if (process.env.USERNAME === "mansi") {
-//     runProgram(`2
-// 1
-// 5
-// 5
-// 1 2 1 3 2`);
-// } else {
-//     process.stdin.resume();
-//     process.stdin.setEncoding("ascii");
-//     let read = "";
-//     process.stdin.on("data", function (input) {
-//         read += input;
-//     });
-//     process.stdin.on("end", function () {
-//         read = read.replace(/\n$/, "");
-//         read = read.replace(/\n$/, "");
-//         runProgram(read);
-//     });
-//     process.on("SIGINT", function () {
-//         read = read.replace(/\n$/, "");
-//         runProgram(read);
-//         process.exit(0);
-//     });
-// }
+if (process.env.USERNAME === "mansi") {
+    runProgram(`1
+    5
+    1 2 1 3 4 4 5 2 3`);
+} else {
+    process.stdin.resume();
+    process.stdin.setEncoding("ascii");
+    let read = "";
+    process.stdin.on("data", function (input) {
+        read += input;
+    });
+    process.stdin.on("end", function () {
+        read = read.replace(/\n$/, "");
+        read = read.replace(/\n$/, "");
+        runProgram(read);
+    });
+    process.on("SIGINT", function () {
+        read = read.replace(/\n$/, "");
+        runProgram(read);
+        process.exit(0);
+    });
+}
