@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY-3</title>
+</head>
+<h1>ARRAY-3</h1>
+
+<body>
+    <script>
+        function MyArray(x) {
+            Object.defineProperty(this, "length", {
+                value: 0,
+                enumerable: false,
+                configurable: true,
+                writable: true
+
+            })
+
+            this.length = arguments.length;
+
+            for (let i = 0; i < this.length; i++) {
+                this[i] = arguments[i]
+            }
+        }
+
+        let arr = new MyArray("Will", "Max", "Mike");
+
+
+        // printing the array in Array format, not the object one
+        console.log('arr:', Object.values(arr))
+
+
+        // Pushing a new value to the array
+        MyArray.prototype.push = function (elment) {
+            let index = this.length;
+            this.length++;
+            this[index] = elment;
+        }
+        arr.push("Eleven")
+
+
+        // return the first element from the array
+        console.log('arr:', arr[0])
+
+        
+        console.log('arr:', Object.values(arr))
+
+        // Reversing the array and returning it
+
+    </script>
+</body>
+
+</html>
