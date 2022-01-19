@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+
+<body>
+    <h1>Inheritance</h1>
+    <script>
+        // Implementation of inheritance model of my family using Object.create() 
+        let grandParents = {
+            father: "Balbir",
+            mother: "Shailo"
+        };
+
+        let parents = Object.create(grandParents);
+        parents.father = "Ashok";
+        parents.mother = "Ravita";
+
+        let daughter = Object.create(parents);
+        daughter.name = "Anjali";
+
+        console.log(grandParents);
+        console.log(parents);
+        console.log(daughter)
+
+        // Implementation of inheritance model of my family using constructor functions
+        function Grandparents(f, m) {
+            this.father = 'Balbir';
+            this.mother = 'Shailo';
+        }
+
+        function Parents() {
+            this.father = 'Ashok';
+            this.mother = 'Ravita';
+        }
+
+        let parent = new Grandparents();
+
+        let son = new Parents();
+
+        console.log(parent);
+
+        console.log(son)
+
+
+    </script>
+</body>
+
+</html>
