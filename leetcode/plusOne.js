@@ -1,8 +1,8 @@
-You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
+// You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
 
-Increment the large integer by one and return the resulting array of digits.
+// Increment the large integer by one and return the resulting array of digits.
 
- 
+
 
 // Example 1:
 
@@ -25,21 +25,40 @@ Increment the large integer by one and return the resulting array of digits.
 // Explanation: The array represents the integer 9.
 // Incrementing by one gives 9 + 1 = 10.
 // Thus, the result should be [1,0].
- 
-var plusOne = function(digits) {
-    let str = "";
-    let newStr;
-    for (let i = 0; i < digits.length; i++) {
-       str+=digits[i];
-       newStr = Number(str) + 1;
-    }
-    console.log(newStr)
-    let arr = newStr.toString()
-    let newArr = []
-    for (let j = 0; j < arr.length; j++) {
-       newArr.push(Number(arr[j]))
-    }
-    return newArr;
+
+
+var plusOne = function (digits) {
+
+   for (let i = digits.length - 1; i >= 0; i--) {
+      if (digits[i] < 9) {
+         digits[i] = digits[i] + 1;
+         return digits;
+      }
+      else {
+         digits[i] = 0;
+      }
+   }
+
+   digits.unshift(1)
+   return digits;
 };
-let digits =[6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3];
+
+let digits = [1, 2, 9]
 console.log(plusOne(digits))
+
+
+// var plusOne = function(digits) {
+//    let str = "";
+//    let newStr;
+//    for (let i = 0; i < digits.length; i++) {
+//       str+=digits[i];
+//       newStr = Number(str) + 1;
+//    }
+//    console.log(newStr)
+//    let arr = newStr.toString()
+//    let newArr = []
+//    for (let j = 0; j < arr.length; j++) {
+//       newArr.push(Number(arr[j]))
+//    }
+//    return newArr;
+// };
